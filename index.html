@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turn visible web workflows into typed, human-approved WebMCP tools.">
+  <meta name="theme-color" content="#07110f">
+  <title>Bridge Studio — A browser people and agents can share</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Bridge Studio home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>Bridge Studio</span>
+      <small>WebMCP</small>
+    </a>
+    <div class="top-actions">
+      <span id="protocolStatus" class="protocol-status"><span class="pulse"></span> Checking WebMCP</span>
+      <button id="tourButton" class="quiet-button">How it works</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="browser-shell" aria-label="Shared browser">
+      <div class="browser-tabs">
+        <div class="tab active"><span class="tab-dot"></span><span id="tabTitle">Voyager Stays</span><button aria-label="Close tab">×</button></div>
+        <button class="new-tab" aria-label="New tab">+</button>
+        <span class="session-label">ISOLATED SESSION · <b id="sessionId"></b></span>
+      </div>
+      <div class="browser-toolbar">
+        <button id="backButton" class="icon-button" aria-label="Back">←</button>
+        <button id="forwardButton" class="icon-button" aria-label="Forward">→</button>
+        <button id="refreshButton" class="icon-button" aria-label="Refresh">↻</button>
+        <form id="addressForm" class="address-bar">
+          <span class="lock">◇</span>
+          <input id="addressInput" aria-label="Address" autocomplete="off" spellcheck="false" value="demo://voyager-stays">
+          <button type="submit">Go</button>
+        </form>
+        <button id="inspectButton" class="inspect-button">Inspect page</button>
+      </div>
+      <div id="browserViewport" class="browser-viewport"></div>
+    </section>
+
+    <aside class="agent-panel" aria-label="Agent tools panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">PAGE CAPABILITIES</p>
+          <h1>Tool workshop</h1>
+        </div>
+        <span id="toolCount" class="tool-count">0 active</span>
+      </div>
+      <p class="panel-copy">Turn visible workflows into typed tools. You approve the contract; your agent handles the steps.</p>
+
+      <div class="section-label"><span>DISCOVERED ON THIS PAGE</span><span id="discoveryStatus">Ready</span></div>
+      <div id="candidateTools" class="tool-list"></div>
+
+      <div class="section-label"><span>ACTIVE TOOLS</span><button id="revokeAllButton" class="text-button">Revoke all</button></div>
+      <div id="activeTools" class="tool-list"></div>
+
+      <div class="trace-heading">
+        <div class="section-label no-margin"><span>LIVE ACTION TRACE</span></div>
+        <button id="clearTraceButton" class="text-button">Clear</button>
+      </div>
+      <ol id="traceList" class="trace-list" aria-live="polite"></ol>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="approvalDialog" class="approval-dialog">
+    <form method="dialog">
+      <div class="dialog-icon">✓</div>
+      <p class="eyebrow">HUMAN CHECKPOINT</p>
+      <h2 id="approvalTitle">Approve tool</h2>
+      <p id="approvalDescription"></p>
+      <div id="approvalSchema" class="schema-preview"></div>
+      <label class="approval-check"><input id="approvalCheck" type="checkbox"> I reviewed the inputs and side effects.</label>
+      <div class="dialog-actions">
+        <button value="cancel" class="quiet-button">Cancel</button>
+        <button id="confirmApproval" value="approve" class="primary-button" disabled>Approve &amp; register</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="tourDialog" class="tour-dialog">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Close">×</button>
+      <p class="eyebrow">THE COMPATIBILITY LAYER</p>
+      <h2>From a visual workflow to a trustworthy tool.</h2>
+      <div class="tour-grid">
+        <div><b>01</b><h3>See</h3><p>Discover forms and meaningful actions from the page.</p></div>
+        <div><b>02</b><h3>Review</h3><p>Inspect typed inputs, permissions, and side effects.</p></div>
+        <div><b>03</b><h3>Share</h3><p>Register approved operations with the browser agent.</p></div>
+        <div><b>04</b><h3>Observe</h3><p>Watch every execution update the same interface.</p></div>
+      </div>
+      <button value="close" class="primary-button full">Start exploring</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
