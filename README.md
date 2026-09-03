@@ -2,7 +2,7 @@
 
 A visible, human-governed browser workspace that turns ordinary web workflows into typed WebMCP tools.
 
-**Live application:** https://webmcp-six.vercel.app  
+**Live application:** https://webmcp-bridge-studio.vercel.app  
 **Public source:** https://github.com/SalilBhasinOfficial/webmcp-browser-studio
 
 Bridge Studio explores a compatibility layer for the web before every site offers native WebMCP. It discovers meaningful workflows, presents their typed contracts and side effects to the user, registers only approved tools, executes them in the shared interface, and preserves an action trace.
