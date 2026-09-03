@@ -1,6 +1,7 @@
 # Devpost submission draft
 
-**Live application:** https://webmcp-bridge-studio.vercel.app  
+**Live application:** https://webmcp-bridge-studio.vercel.app
+
 **Public repository:** https://github.com/SalilBhasinOfficial/webmcp-browser-studio
 
 ## Inspiration
