@@ -4,6 +4,21 @@
 
 **Public repository:** https://github.com/SalilBhasinOfficial/webmcp-browser-studio
 
+**Tagline:** A visible browser workspace that turns web workflows into typed, human-approved tools.
+
+**Built with:** WebMCP Imperative API, JavaScript, JSON Schema, HTML, CSS, Node.js, Chrome, Vercel
+
+## Testing instructions for judges
+
+1. Open the live application in ChatGPT's in-app browser, or Chrome 149+ with `chrome://flags/#enable-webmcp-testing` enabled.
+2. Confirm the header reads **WebMCP connected**. In an ordinary browser it truthfully displays **Preview mode** while retaining all human controls.
+3. Call `bridge_inspect_page` to retrieve the typed workflows detected on Voyager Stays.
+4. In the right panel, review and approve `search_stays`. The tool appears under **Active tools** immediately.
+5. Ask the agent to call `search_stays` with destination `Lisbon`, dates `2026-10-12` to `2026-10-16`, and `2` guests. Confirm the visible page and action trace update.
+6. Call `bridge_navigate` with `demo://civic-desk`, approve `prepare_permit_draft`, and prepare a draft. Confirm the result explicitly remains unsubmitted.
+
+No account, payment, credentials, or private testing instructions are required.
+
 ## Inspiration
 
 The open web will not become agent-native overnight. Today, agents often guess their way through visual interfaces while people struggle to see what the agent understood or changed. We wanted a bridge: a browser workspace where people can inspect, approve, observe, and revoke the capabilities shared with an agent.
