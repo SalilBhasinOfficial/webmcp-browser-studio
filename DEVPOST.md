@@ -1,5 +1,8 @@
 # Devpost submission draft
 
+**Live application:** https://webmcp-six.vercel.app  
+**Public repository:** https://github.com/SalilBhasinOfficial/webmcp-browser-studio
+
 ## Inspiration
 
 The open web will not become agent-native overnight. Today, agents often guess their way through visual interfaces while people struggle to see what the agent understood or changed. We wanted a bridge: a browser workspace where people can inspect, approve, observe, and revoke the capabilities shared with an agent.
@@ -37,8 +40,8 @@ The next step is an isolated remote-browser worker for domains the user is autho
 
 ## Submission checklist
 
-- [ ] Add the final live URL
-- [ ] Add the public GitHub repository URL
+- [x] Add the final live URL
+- [x] Add the public GitHub repository URL
 - [ ] Record and publish a public YouTube demo under three minutes with audio
 - [ ] Add screenshots
 - [ ] Confirm the deployed URL in ChatGPT's in-app browser or Chrome 149+
