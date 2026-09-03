@@ -5,6 +5,7 @@
   "type": "module",
   "description": "A visible, human-governed browser workspace that turns web workflows into typed WebMCP tools.",
   "scripts": {
+    "build": "node build.mjs",
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "test": "node --test"
