@@ -2,7 +2,7 @@
 
 A visible, human-governed browser workspace that turns ordinary web workflows into typed WebMCP tools.
 
-**Live application:** https://webmcp-bridge-studio.vercel.app
+**Live application:** https://webmcp-six.vercel.app
 
 **Public source:** https://github.com/SalilBhasinOfficial/webmcp-browser-studio
 
